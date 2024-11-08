@@ -13,5 +13,19 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities, theme }) {
+      const selectionUtilities = {
+        '::selection': {
+          backgroundColor: theme('textSelection.DEFAULT.selection.backgroundColor', '#000000'),
+          color: theme('textSelection.DEFAULT.selection.color', '#ffffff'),
+        },
+        '::-moz-selection': {
+          backgroundColor: theme('textSelection.DEFAULT.selection.backgroundColor', '#000000'),
+          color: theme('textSelection.DEFAULT.selection.color', '#ffffff'),
+        },
+      };
+      addUtilities(selectionUtilities);
+    },
+  ],
 };
