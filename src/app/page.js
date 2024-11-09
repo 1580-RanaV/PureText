@@ -13,7 +13,7 @@ const page = () => {
         <span className="font-sans font-bold text-black text-9xl">PureText</span>
 
         <section className="pt-12 max-w-2xl">
-          <p className="text-gray-600 font-sans text-lg md:text-xl px-4">
+          <p className="text-gray-600 font-mono text-lg md:text-xl px-4">
           The editor that keeps things real—authentic and plagiarism-free.
           Created by the team at Dream and Try Co. (DATCO), it’s free forever. Give it a go and keep your words truly pure!
           </p>

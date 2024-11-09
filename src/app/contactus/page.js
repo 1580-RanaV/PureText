@@ -18,8 +18,8 @@ const page = () => {
 
           {/* Introduction */}
           <section className="mb-16 text-center">
-            <p className="text-lg text-black leading-relaxed">
-              We value your feedback and are here to assist you! Whether you have a question, need support, or simply want to share your thoughts, feel free to reach out to us at <strong>puretext@datco.com</strong>. Our dedicated team is committed to providing timely and helpful responses to ensure you have the best experience with PureText.
+            <p className="text-lg text-black leading-relaxed font-mono">
+              We value your feedback and are here to assist you! Whether you have a question, need support, or simply want to share your thoughts, feel free to reach out to us at <strong className="font-sans">puretext@datco.com</strong>. Our dedicated team is committed to providing timely and helpful responses to ensure you have the best experience with PureText.
               For additional resources, you can connect with us on our social media channels. We are always eager to hear from you and look forward to assisting you in any way we can. Your satisfaction is our top priority and we thank you for using our product.
             </p>
           </section>

@@ -55,7 +55,7 @@ const Page = () => {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen mt-[7rem] font-sans">
+      <div className="min-h-screen mt-[7rem] font-mono">
         <main className="max-w-7xl mx-auto px-4 py-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Input Box */}
@@ -102,7 +102,7 @@ const Page = () => {
             <button
               onClick={handlePureItClick}
               disabled={isLoading}
-              className={`px-8 py-3 bg-violet-500 text-white text-xl font-medium rounded-full
+              className={`px-8 py-3 bg-violet-500 text-white text-xl font-sans rounded-full
                           shadow-md hover:bg-violet-600 active:bg-violet-700 
                           transition-all duration-200 ease-in-out
                           transform hover:-translate-y-1 ${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
