@@ -1,22 +1,38 @@
 import React from 'react';
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
+import Footer from '../app/components/Footer';
+import Navbar from '../app/components/Navbar';
 import Link from 'next/link';
+import localFont from "next/font/local";
+import Head from 'next/head';
+
+// Import the same fonts you're using in layout.js
+const geistSans = localFont({
+  src: "../app/fonts/GeistVF.woff",
+  variable: "--font-geist-sans",
+  weight: "100 900",
+});
+const geistMono = localFont({
+  src: "../app/fonts/GeistMonoVF.woff",
+  variable: "--font-geist-mono",
+  weight: "100 900",
+});
 
 const Page = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <>
+    <Head>
+        <title>PureText | Plag Free Text</title>
+        <meta name="description" content="Created by Dream and Try Co. (DATCO)" />
+      </Head>
+    <div className={`${geistSans.variable} ${geistMono.variable} min-h-screen flex flex-col bg-white`}>
       <Navbar />
       
       <main className="flex-grow flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
-        
-        {/* logo on the main page across all screen devices */}
         <h1 className="font-sans font-bold text-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 
           tracking-tight leading-none">
           PureText
         </h1>
 
-        {/* under logo description */}
         <section className="mt-6 sm:mt-8 md:mt-10 lg:mt-12 max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl mx-auto">
           <p className="text-gray-600 font-mono text-base sm:text-lg md:text-xl 
             leading-relaxed text-center">
@@ -26,11 +42,8 @@ const Page = () => {
           </p>
         </section>
 
-        {/* kept 2 buttons into 1 section to give easy flexing in different screen sizes */}
         <section className="mt-8 sm:mt-10 md:mt-12 flex flex-col sm:flex-row 
           space-y-4 sm:space-y-0 sm:space-x-4 font-sans items-center justify-center">
-          
-          {/* link tag to make it spa and 2 colors 1 static and 1 when hovered  */}
           <Link href="/homepage">
             <button className="w-[200px] no-invert rounded-full bg-violet-500 hover:bg-violet-700 
               text-white font-bold py-3 px-6 transition-colors duration-200
@@ -49,10 +62,9 @@ const Page = () => {
         </section>
       </main>
 
-      {/* footer component */}
       <Footer />
-
     </div>
+    </>
   );
 };
 
