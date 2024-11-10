@@ -5,7 +5,9 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
+// arrow function, returns jsx to describe the ui
 const Page = () => {
+  
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqData = [

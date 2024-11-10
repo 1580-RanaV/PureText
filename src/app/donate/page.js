@@ -6,6 +6,8 @@ const Page = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
+
+      {/* just a donation page dummy */}
       <main className="flex-grow flex items-center justify-center">
         <div className="text-center">
           <img src="/donate.gif" alt="Browser Icon" className="mx-auto mb-4 max-w-100" />

@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 
+//custom fonts to use 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -12,6 +13,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
+// page title and description
 export const metadata = {
   title: "PureText | Plag Free Text",
   description: "Created by Dream and Try Co. (DATCO)",

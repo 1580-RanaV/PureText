@@ -7,6 +7,7 @@
   --foreground: #171717;
 }
 
+/* easy font styling so that we can use font-sans and font-mono whenever */
 .font-sans {
   font-family: var(--font-geist-sans);
 }
@@ -15,6 +16,8 @@
   font-family: var(--font-geist-mono);
 }
 
+
+/* defined dark and light mode here colors as bg-background and bg-foreground */
 @media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
@@ -27,3 +30,11 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* html {
+  filter: invert(1);
+}
+
+.no-invert {
+  filter: invert(1);
+} */

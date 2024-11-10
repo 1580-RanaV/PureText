@@ -17,7 +17,7 @@ const Footer = () => {
           width={16}
           height={16}
         />
-        About DATCO.
+        About DATCO
       </Link>
       <Link
         className="flex items-center gap-2 hover:underline hover:underline-offset-4 hover:text-[#272727]"

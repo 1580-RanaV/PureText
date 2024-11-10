@@ -5,7 +5,8 @@ function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-background backdrop-blur-sm">
       <div className="max-w-7xl mx-auto flex justify-between items-center py-5 px-4">
-        {/* Logo */}
+        
+        {/* the logo and text under 'datco' using block so that they go one below other */}
         <Link href={'/'} className="hover:opacity-50 transition-opacity">
           <span className="text-2xl font-sans text-left">
             <span className="block font-bold">PureText</span>
@@ -13,7 +14,7 @@ function Navbar() {
           </span>
         </Link>
 
-        {/* Navigation Links */}
+        {/* 2 buttons faq and donate and support */}
         <ul className="flex items-center gap-4 sm:gap-8 md:gap-12 font-medium font-sans">
           <li>
             <Link

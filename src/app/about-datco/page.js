@@ -2,26 +2,27 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
-const page = () => {
+const Page = () => {
   return (
     <div className="min-h-screen bg-background font-sans text-black">
       <Navbar />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="bg-background rounded-lg p-8">
           
-          {/* Header Section */}
+          {/* heading */}
           <h1 className="text-4xl sm:text-5xl font-bold text-center text-black mb-12">
             About DATCO (Dream and Try Company)
           </h1>
 
-          {/* Introduction */}
+          {/* first heading under main heading
+          each heading is divided under a section and p tag for description */}
           <section className="mb-16">
             <p className="text-lg text-black leading-relaxed font-mono">
               DATCO, short for Dream and Try Company/Community, is a vibrant tech group founded by four friends in college. United by a shared passion for innovation and problem-solving, this team isn't just about completing projects—it's about creating, learning, and having fun along the way. With the collaborative efforts DATCO emerged from their collective desire to transform bold ideas into real-world applications that everyone can enjoy and learn from.
             </p>
           </section>
 
-          {/* SpeedCode Project Section */}
+          {/* about speedcode */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-black mb-6">
               SpeedCode: Making Coding Social and Interactive
@@ -31,7 +32,7 @@ const page = () => {
             </p>
           </section>
 
-          {/* AI Exploration Section */}
+          {/* ai explore */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-black mb-6">
               Exploring Variety of Fields
@@ -41,7 +42,7 @@ const page = () => {
             </p>
           </section>
 
-          {/* Collaboration and Idea Sharing Section */}
+          {/* collab and idea */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-black mb-6">
               Collaboration and Idea Sharing
@@ -51,7 +52,7 @@ const page = () => {
             </p>
           </section>
 
-          {/* Community-Focused Section */}
+          {/* community focused */}
           <section className="mb-16 last:mb-0">
             <h2 className="text-3xl font-bold text-black mb-6">
               Building a Community
@@ -63,9 +64,11 @@ const page = () => {
 
         </div>
       </div>
+
       <Footer />
+
     </div>
   );
 };
 
-export default page;
+export default Page;

@@ -6,14 +6,16 @@ const CookiesPolicy = () => {
   return (
     <div className="min-h-screen bg-white font-sans text-black">
       <Navbar />
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="bg-white rounded-lg p-8">
-          {/* Header Section */}
+
+          {/* heading */}
           <h1 className="text-4xl sm:text-5xl font-bold text-center text-black mb-14">
             Cookies Policy for PureText by Dream and Try Co.
           </h1>
           
-          {/* Metadata Section */}
+          {/* first 3 lines */}
           <div className="space-y-4 mb-12 text-black">
             <p className="text-lg">
               <span className="font-semibold">Effective Date:</span> 23rd October, 2024
@@ -29,16 +31,17 @@ const CookiesPolicy = () => {
             </p>
           </div>
 
-          {/* Introduction */}
+          {/* introduction */}
           <p className="text-lg text-black mb-12 leading-relaxed font-mono">
             At PureText by DATCO, we are committed to protecting your privacy while providing a seamless user experience. This Cookies Policy outlines our practices regarding the use of cookies on our website. We want to be completely transparent:{' '}
             <span className="font-semibold">we only use essential cookies for authentication and quick login access</span>
             , and we never share or sell this data to third parties.
           </p>
 
-          {/* Main Content Sections */}
+          {/* different parts are kept into sections from here */}
           <div className="space-y-12">
-            {/* What Are Cookies Section */}
+            
+            {/* what are cookies */}
             <section>
               <h2 className="text-3xl font-bold text-black mb-4">1. What Are Cookies?</h2>
               <p className="text-lg text-black leading-relaxed font-mono">
@@ -46,7 +49,7 @@ const CookiesPolicy = () => {
               </p>
             </section>
 
-            {/* Our Commitment Section */}
+            {/* commitmment */}
             <section>
               <h2 className="text-3xl font-bold text-black mb-4">2. Our Cookie Usage and Commitment</h2>
               <p className="text-lg text-black leading-relaxed mb-4 font-mono">
@@ -59,7 +62,7 @@ const CookiesPolicy = () => {
               </ul>
             </section>
 
-            {/* Types of Cookies Section */}
+            {/* typaaa of cookies */}
             <section>
               <h2 className="text-3xl font-bold text-black mb-4">3. Types of Cookies We Use</h2>
               <p className="text-lg text-black leading-relaxed mb-4 font-mono">
@@ -72,7 +75,7 @@ const CookiesPolicy = () => {
               </ul>
             </section>
 
-            {/* Data Handling Section */}
+            {/* data hadnling */}
             <section>
               <h2 className="text-3xl font-bold text-black mb-4">4. How We Handle Cookie Data</h2>
               <p className="text-lg text-black leading-relaxed font-mono">
@@ -80,7 +83,7 @@ const CookiesPolicy = () => {
               </p>
             </section>
 
-            {/* Managing Cookies Section */}
+            {/* managing cookies section */}
             <section>
               <h2 className="text-3xl font-bold text-black mb-4">5. Managing Cookies</h2>
               <p className="text-lg text-black leading-relaxed mb-4 font-mono">
@@ -93,7 +96,7 @@ const CookiesPolicy = () => {
               </ul>
             </section>
 
-            {/* Policy Updates Section */}
+            {/* policy updates section */}
             <section>
               <h2 className="text-3xl font-bold text-black mb-4">6. Changes to This Cookies Policy</h2>
               <p className="text-lg text-black leading-relaxed font-mono">
@@ -101,7 +104,7 @@ const CookiesPolicy = () => {
               </p>
             </section>
 
-            {/* Contact Section */}
+            {/* contact section */}
             <section className="bg-white rounded-lg">
               <h2 className="text-3xl font-bold text-black mb-4">7. Contact Information</h2>
               <p className="text-lg text-black leading-relaxed mb-4 font-mono">
@@ -121,7 +124,7 @@ const CookiesPolicy = () => {
             </section>
           </div>
 
-          {/* Footer Note */}
+          {/* footer note above footer */}
           <p className="text-lg text-black mt-12 text-center italic">
             We appreciate your trust in PureText by DATCO and are committed to using cookies responsibly, solely for enhancing your login experience.
           </p>
