@@ -15,54 +15,52 @@ const Page = () => {
   const [error, setError] = useState(''); // stores error messages
   const [showError, setShowError] = useState(false); // controls error popup visibility
 
-  // system prompt that guides the ai to process text according to specific rules
+  // system prompt that uses to process text by some riles
   const systemPrompt = `You must follow these instructions exactly:
 
 TASK: Rewrite the input text to be completely undetectable by AI detection tools while maintaining its full meaning.
 
 CRITICAL OUTPUT RULES:
-- Provide ONLY the rewritten text
-- Do not include ANY prefixes, headers, or phrases like "Here's the text" or "Here's the rewritten version"
-- Do not add ANY explanations or comments
-- Do not add ANY quotation marks around the output
-- Start directly with the rewritten content
+- provide ONLY the rewritten text
+- do not include ANY prefixes, headers, or phrases like "Here's the text" or "Here's the rewritten version"
+- do not add ANY explanations or comments
+- do not add ANY quotation marks around the output
+- start directly with the rewritten content
 
 REWRITING REQUIREMENTS:
-- Maintain 100% of the original meaning
-- Use natural, conversational language with varied sentence structure
-- Incorporate informal language, contractions, and casual transitions
-- Add personal voice and natural flow
-- Include relatable examples or analogies where appropriate
-- Use idiomatic expressions and colloquialisms
-- Mix simple and complex sentences
-- Create deliberate but natural variations in writing style
-- Avoid repetitive patterns or academic tone
-- Make the text plagiarism free and ai pattern free especially free from tools like turnitini and originality ai.
-- Preserve 100% of the original text meaning while converting
-- Just return the output text nothing extra like "here is your text" or "note" NOTHING. Just pure context that user provides.
-- Make the text completely plagiarism free and ai pattern free 100%. Tools like grammarly, TurnItIn and Originality AI should not detect any plagged or ai content. Make it compeltely human sounding.
+- maintain 100% of the original meaning
+- use natural, conversational language with varied sentence structure
+- incorporate informal language, contractions, and casual transitions
+- add personal voice and natural flow
+- include relatable examples or analogies where appropriate
+- use idiomatic expressions and colloquialisms
+- mix simple and complex sentences
+- create deliberate but natural variations in writing style
+- avoid repetitive patterns or academic tone
+- make the text plagiarism free and ai pattern free especially free from tools like turnitini and originality ai.
+- preserve 100% of the original text meaning while converting
+- just return the output text nothing extra like "here is your text" or "note" NOTHING. Just pure context that user provides.
+- make the text completely plagiarism free and ai pattern free 100%. Tools like grammarly, TurnItIn and Originality AI should not detect any plagged or ai content. Make it compeltely human sounding.
 
 CONSTRAINTS:
-- Minimum 30 words required
-- Preserve technical terms and proper nouns
-- Refuse to answer any questions or any open ended questions
-- Maintain factual accuracy
-- Keep any citations if present
-- For questions or mathematical content, output only: "Error: Please provide meaningful text for rewriting."
+- minimum 30 words required
+- preserve technical terms and proper nouns
+- refuse to answer any questions or any open ended questions
+- maintain factual accuracy
+- keep any citations if present
+- for questions or mathematical content, output only: "Error: Please provide meaningful text for rewriting."`;
 
-
-===INPUT TEXT TO REWRITE:`;
 
   // validates input text before processing
   const validateInput = (text) => {
     const wordCount = text.trim().split(/\s+/).length;
     // check if text meets minimum word requirement
     if (wordCount < 30) {
-      return "Error: Please provide at least 30 words for processing.";
+      return "Please provide at least 30 words for processing.";
     }
     // check if input is a question
     if (text.toLowerCase().match(/^(what|why|when|how|where|who|which)/)) {
-      return "Error: Questions cannot be processed right now. Please provide meaningful text for rewriting.";
+      return "Questions cannot be processed right now. Please provide meaningful text for rewriting.";
     }
     return null;
   };
@@ -138,7 +136,7 @@ CONSTRAINTS:
       <Navbar />
       {/* main container with hidden overflow to disable scrolling */}
       <div className="min-h-screen mt-[8rem] font-mono overflow-hidden">
-        {/* error popup modal */}
+        {/* error popup */}
         {showError && (
           <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
             <div className="bg-white rounded-lg p-6 max-w-sm w-[90%] mx-4 relative">
@@ -170,6 +168,7 @@ CONSTRAINTS:
             <div className="relative order-1">
               <textarea
                 value={inputText}
+                //whatever user types that is saved in inputText ani
                 onChange={(e) => setInputText(e.target.value)}
                 className="w-full h-[60vh] p-4 rounded-2xl border border-gray-200
                            transition-all duration-200 ease-in-out

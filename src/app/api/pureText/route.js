@@ -26,12 +26,12 @@ export async function POST(request) {
 
     if (!response.ok) {
       const errorData = await response.json();
-      console.error('Groq API error:', errorData);
-      throw new Error(`Groq API error: ${errorData.error?.message || 'Unknown error'}`);
+      console.error('API error:', errorData);
+      throw new Error(`API error: ${errorData.error?.message || 'Unknown error'}`);
     }
 
     const data = await response.json();
-    console.log("Groq response:", data);
+    console.log("response:", data);
 
     return new Response(JSON.stringify({ 
       outputText: data.choices[0].message.content 
