@@ -39,6 +39,8 @@ REWRITING REQUIREMENTS:
 - Avoid repetitive patterns or academic tone
 - Make the text plagiarism free and ai pattern free especially free from tools like turnitini and originality ai.
 - Preserve 100% of the original text meaning while converting
+- Just return the output text nothing extra like "here is your text" or "note" NOTHING. Just pure context that user provides.
+- Make the text completely plagiarism free and ai pattern free 100%. Tools like grammarly, TurnItIn and Originality AI should not detect any plagged or ai content. Make it compeltely human sounding.
 
 CONSTRAINTS:
 - Minimum 30 words required
@@ -47,6 +49,7 @@ CONSTRAINTS:
 - Maintain factual accuracy
 - Keep any citations if present
 - For questions or mathematical content, output only: "Error: Please provide meaningful text for rewriting."
+
 
 ===INPUT TEXT TO REWRITE:`;
 

@@ -1,33 +1,50 @@
 // src/app/api/pureText/route.js
 
-import ollama from 'ollama';
-
 export async function POST(request) {
   try {
     const { inputText } = await request.json();
-    console.log("Received input text:", inputText); // Log the input text to verify it's coming through
+    console.log("Received input text:", inputText);
 
-
-    fetch("http://127.0.0.1:11434")
-    .then(() => console.log("Connected to Ollama"))
-    .catch(() => console.error("Could not connect to Ollama"));
-
-    // Send the input text to Ollama for processing
-    const response = await ollama.chat({
-      model: 'llama3.1',
-      messages: [{ role: 'user', content: inputText }]
+    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${process.env.LLAMA_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: 'llama-3.2-90b-text-preview',
+        messages: [
+          { 
+            role: 'user',
+            content: inputText
+          }
+        ],
+        temperature: 0.7,
+        max_tokens: 2000
+      }),
     });
 
-    console.log("Ollama response:", response); // Log the Ollama response to debug
+    if (!response.ok) {
+      const errorData = await response.json();
+      console.error('Groq API error:', errorData);
+      throw new Error(`Groq API error: ${errorData.error?.message || 'Unknown error'}`);
+    }
 
-    // Return the processed text
-    return new Response(JSON.stringify({ outputText: response.message.content }), {
+    const data = await response.json();
+    console.log("Groq response:", data);
+
+    return new Response(JSON.stringify({ 
+      outputText: data.choices[0].message.content 
+    }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
+
   } catch (error) {
-    console.error('Error in API route:', error); // Log any errors that occur
-    return new Response(JSON.stringify({ error: 'An error occurred while processing the text' }), {
+    console.error('Error in API route:', error);
+    return new Response(JSON.stringify({ 
+      error: 'An error occurred while processing the text' 
+    }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' },
     });
