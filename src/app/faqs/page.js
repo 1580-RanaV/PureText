@@ -42,7 +42,7 @@ const Page = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
 
-      <main className="flex-grow flex flex-col items-center justify-center px-4 py-12">
+      <main className="flex-grow flex flex-col items-center justify-center px-4 py-12 mt-[6rem]">
         <h1 className="text-5xl font-bold font-sans text-center mb-24">Frequently Asked Questions</h1>
         
         <div className="space-y-4 w-full max-w-3xl">
